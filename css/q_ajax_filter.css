@@ -1,0 +1,397 @@
+li.ajaxFilterItem.filter-selected a{
+    color: #FF0000;
+}
+
+div#progbar-container{
+    width: 200px;
+    height: 50px;
+    background-color: #EEE;
+}
+
+div#progbar{
+    height: 100%;
+    width: 0%;
+    background-color: #BBB;
+}
+
+#ajax-filtered-section .pagination {
+    float: left;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#ajax-filtered-section .pagination div {
+    display: inline-block;
+}
+
+#ajax-filtered-section .pagination a {
+    padding: 10px;
+    border-radius: 0.15em;
+    border: 1px solid #f2f2f2;
+    margin: 0 4px;
+    border-radius: 0.2em;
+}
+
+#ajax-filtered-section .pagination a.current {
+    border: 1px solid #f2f2f2;
+    background: #30b8d9;
+    color: #fff;
+}
+
+#ajax-filtered-section .pagination a:hover {
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+    border-color: #ddd;
+}
+
+
+/* search page */
+
+body.ajax-filter #content h1 {
+    padding-left: 23%;
+    font-size: 140%;
+    margin-bottom: 10px;
+}
+
+body.ajax-filter #content h1 span.bold {
+    font-weight: bold;
+}
+
+.search-bar {
+    float: left;
+    width: 100%;
+    clear: both;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 30px 0  10px;
+    margin-bottom: 30px;
+}
+
+.search-bar form div {
+    float: left;
+}
+
+.search-bar form div h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 90%;
+    padding-left: 11px;
+    text-align: left;
+}
+
+body.ajax-filter #content .selector {
+   height: 41px;
+   overflow: hidden;
+   background: url('images/selector_big.png') no-repeat right #fbfbfb;
+   border: 1px solid #e6eaec;
+   float: left;
+   margin-right: 15px;
+   padding-right: 0px;
+}
+
+body.ajax-filter #content .selector.general, 
+body.ajax-filter #content .input.general {
+    width: 100%;
+}
+
+body.ajax-filter #content .selector select {
+    background: transparent;
+    padding: 1px 20px 3px 8px;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 150%;
+    border: 0;
+    border-radius: 0;
+    height: 41px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #ababab;
+/*    border: 1px solid #ddd;*/
+    box-shadow: 0 0 6px #F1F1F1 inset;
+    overflow:hidden;
+    width: 100%;
+}
+
+body.ajax-filter #content .selector select:focus {
+    color: #000000;
+}
+
+body.ajax-filter #content .input {
+    margin-top: 10px;
+}
+
+body.ajax-filter #content .input input {
+    float: left;
+    width: 93%;
+}
+
+body.ajax-filter #content .input input:focus {
+    color: #000000;
+}
+
+body.ajax-filter #content .selector select option {
+    padding: 10px 0;
+}
+
+body.ajax-filter #content .selector.disabled {
+    background: url('images/selector_disabled_big.png') no-repeat right #fbfbfb;
+}
+
+body.ajax-filter #content .selector select[disabled] {
+    color: #f2f2f2;
+    cursor: url('images/cursor_disabled.png'),auto;
+}
+
+body.ajax-filter #content input[type="submit"], body.ajax-filter #content input[type="reset"] {
+    float: right;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 110%;
+}
+
+body.ajax-filter #content input[type="submit"]:hover, body.ajax-filter #content input[type="reset"]:hover {
+    text-decoration: underline;
+}
+
+body.ajax-filter #content input[type="submit"][disabled] {
+    cursor: url('images/cursor_disabled.png'),auto;
+    background: #e4e8ea;
+    color: #c9c9c9;
+}
+
+
+
+body.ajax-filter #content #ajax-content {
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    padding: 0;
+    width: 75%
+}
+
+body.ajax-filter #content ul {
+    list-style-type: none;
+}
+
+body.ajax-filter #content ul.ajax-filters {
+    float: left;
+    margin: 0 30px 0 0;
+    padding: 0;
+    width: 20%;
+}
+
+body.ajax-filter #content ul.ajax-filters.vertical {
+    
+}
+
+body.ajax-filter #content ul.ajax-filters.horizontal {
+    width: 100%;
+}
+
+body.ajax-filter #content ul.ajax-filters.horizontal li {
+    float: left;
+}
+
+body.ajax-filter #content ul.ajax-filters.horizontal li.text {
+    margin-top: 12px;
+    margin-right: 10px;
+}
+
+body.ajax-filter #content ul.ajax-filters.horizontal li ul {
+    margin-right: 10px;
+}
+
+body.ajax-filter #content ul.ajax-filters.horizontal li ul li {
+    min-width: 150px;
+}
+
+body.ajax-filter #content ul.ajax-filters.horizontal li.reset,
+body.ajax-filter #content ul.ajax-filters.horizontal li.submit {
+    margin-top: 3px;
+}
+
+body.ajax-filter #content #ajax-content.horizontal {
+    width: 100%;
+}
+
+body.ajax-filter #content .ajax-filters h3 {
+    background: #ededed;
+    color: #666666;
+    font-size: 90%;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+body.ajax-filter #content ul.ajax-filters li {
+    padding: 0;
+    margin: 0;
+}
+
+body.ajax-filter #content ul.ajax-filters li.ajax-filters-li {
+    margin: 10px 0 0;
+}
+
+
+body.ajax-filter #content ul.ajax-filters li.ajax-filters-li-ul-li {
+    width: 100%;
+    background: url("images/li_bullet.png") no-repeat 2px 14px transparent;
+    float: left;
+}
+
+body.ajax-filter #content ul.ajax-filters li.ajax-filters-li-ul-li a {
+    width: 91%;
+    float: left;
+    font-size: 90%;
+    padding: 4px 0 0px 8%;
+}
+
+li.ajaxFilterItem.filter-selected a {
+    color: #96bd1b;
+    background: url("images/icon_remove_12_50.png") no-repeat right 12px transparent;
+}
+
+li.ajaxFilterItem.filter-selected a:hover {
+    background-image: url("images/icon_remove_12.gif") no-repeat right 12px transparent;
+}
+
+body.ajax-filter #content .ajax-filters h4 {
+    color: #666666;
+    font-size: 90%;
+    padding: 8px 10px 6px 10px;
+    font-weight: normal;
+    border-bottom: 1px solid #dddddd;
+    text-transform: uppercase;
+    margin: 0px 0 5px 0;
+}
+
+#ajax-loader {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    margin: 0px 0 0 0;
+}
+
+#ajax-filtered-section {
+    float: left;
+    text-align: left;
+    width: 100%;
+/*    position: relative;
+    z-index: 1;
+    top: 0px;*/
+}
+
+#ajax-filtered-section .ajax-loaded {
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-bottom: 30px;
+    position: relative;
+    display: none;
+}
+
+#ajax-filtered-section .ajax-loaded .image {
+    float: left;
+    width: 170px;
+    margin-right: 30px;
+}
+
+#ajax-filtered-section .ajax-loaded .image img {
+    width: 170px;
+    height: 152px;
+}
+
+#ajax-filtered-section .ajax-loaded .text {
+    float: left;
+    width: 75%;
+}
+
+#ajax-filtered-section .ajax-loaded .text h2 {
+    margin: 2px 0 0;
+    padding: 6px 0 5px;
+    width: 80%;
+    line-height: 130%;
+}
+
+#ajax-filtered-section .ajax-loaded .text h2 a {
+    color: #3f3f3e;
+    font-weight: 600;
+    font-size: 95%;
+}
+
+#ajax-filtered-section .ajax-loaded .text .what {
+    margin: 4px 0 8px;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+#ajax-filtered-section .ajax-loaded .text .what a {
+    color: #30b8d9;
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+#ajax-filtered-section .ajax-loaded .text p {
+    font-size: 100%;
+    color: #404040;
+    margin: 15px 0 0;
+}
+
+#ajax-filtered-section .ajax-loaded .text .who {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#ajax-filtered-section .ajax-loaded .text .who .tag {
+    padding: 5px 15px 6px 25px;
+    color: #fff;
+    float: right;
+    margin-right: 6px;
+    border-radius: 0.15em;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+}
+
+#ajax-filtered-section .ajax-loaded .text .who .tag a {
+    color: #fff;
+}
+
+#ajax-filtered-section .ajax-loaded .text .who .tag.teen {
+    background: url("images/icon_tag_teen.png") no-repeat 0px 0px transparent;
+}
+
+#ajax-filtered-section .ajax-loaded .text .who .tag.adult {
+    background: url("images/icon_tag_adult.png") no-repeat 0px 0px;
+}
+
+a.tax_more.r-touch {
+    display: inline-block;
+    padding: 13px 60px 13px;
+    font-size: 130%;
+    background: #30b8d9;
+    border-radius: 0.15em;
+    color: #fff;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+/* global search results */
+body.search #content .post-content {
+    float: none;
+    width: auto;
+}
+
+p.no-results {
+/*    display: none;*/
+}

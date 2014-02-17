@@ -1,0 +1,536 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Support\n"
+"POT-Creation-Date: 2014-01-28 16:33+0100\n"
+"PO-Revision-Date: 2014-01-28 16:34+0100\n"
+"Last-Translator: Ray <ray@qstudio.us>\n"
+"Language-Team: Q Studio <team@qstudio.us>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: ../q-support.php:179
+#, php-format
+msgid ""
+"<strong>%s</strong> - To submit support requests, you need to <a href=\"#\" "
+"class=\"button q_support_connect q_support_space_both\">%s</a> your account "
+"- <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr ""
+
+#: ../q-support.php:183 ../library/Q_Admin.class.php:210
+msgid "Connect"
+msgstr ""
+
+#: ../q-support.php:185 ../library/Q_Admin.class.php:212
+msgid "Terms of Use"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:155 ../library/Q_Admin.class.php:423
+#: ../library/Q_Admin.class.php:424 ../library/Q_Admin.class.php:442
+#: ../library/Q_Admin.class.php:443
+msgid "General"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:156
+msgid "Themes"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:157
+msgid "Plugins"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:158
+msgid "Widgets"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:159
+msgid "Advanced"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:160
+msgid "Code"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:161
+msgid "Design"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:162 ../library/Q_Admin.class.php:637
+#: ../library/Q_Admin.class.php:701 ../library/Q_Admin.class.php:716
+#: ../library/Q_Admin.class.php:746 ../library/Q_Admin.class.php:784
+msgid "Support"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:163
+msgid "Other"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:207
+#, php-format
+msgid ""
+"To submit support requests, you first need to <a href=\"#\" class=\"button "
+"q_support_connect q_support_space_both\">%s</a> your account - <a href=\"%s"
+"\" target=\"_blank\">%s</a>"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:221
+msgid ""
+"Complete the following form to request support for a problem you are having."
+msgstr ""
+
+#: ../library/Q_Admin.class.php:230
+msgid "Support title"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:235
+msgid "Describe the problem"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:240
+msgid "Problem URL"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:245
+msgid "Category"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:272
+msgid "View Settings"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:274
+msgid ""
+"Be careful to never share your password or confidential information with "
+"anyone that you do not trust!"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:337
+msgid "User Account Error"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:409
+msgid "User Account Key Error"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:477
+msgid "Unknown Error"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:538
+#, php-format
+msgid "<a href=\"%s\"target=\"_blank\">%s</a>"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:540
+msgid "View the Question"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:551
+msgid "Error!"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:563
+msgid "Error - Missing User Data."
+msgstr ""
+
+#: ../library/Q_Admin.class.php:572
+msgid "Error - No data passed."
+msgstr ""
+
+#: ../library/Q_Admin.class.php:613
+msgid "Question Per Page"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:731
+#, php-format
+msgid "Support:<span> %s Answers %s Comments</span>"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:772 ../library/Q_Settings.class.php:604
+msgid "Support Requests"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:773
+msgid "Support Request"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:774
+msgid "Ask a Question"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:775
+msgid "Add New Requests"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:776
+msgid "Edit Support Request"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:777
+msgid "New Support Request"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:778
+msgid "Questions"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:779
+msgid "View Support Request"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:780
+msgid "Search Requests"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:781
+msgid ""
+"<p style=\"margin: 10px;\">No Support Requests found <a href=\"#\" class="
+"\"add-new-h2 q_support_inline\">Ask a Question</a></p>"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:782
+msgid "No Support Requests found in Trash"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:880
+msgid "Answers"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:888
+msgid "Comments"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:896
+msgid "Views"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:904
+msgid "Votes"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:912
+msgid "Status"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:920
+msgid "Asked"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:953
+msgid "Open"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1018
+msgid "Up Votes"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1019
+msgid "Down Votes"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1036
+msgid "Connected to WP Support"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1036
+msgid "Not connected to WP Support"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1179
+msgid "."
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1214
+msgid "Support Settings Saved."
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1255 ../library/Q_Settings.class.php:185
+#: ../library/Q_Settings.class.php:186
+msgid "Settings"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1303
+msgid "year"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1303
+msgid "years"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1304
+msgid "month"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1304
+msgid "months"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1305
+msgid "week"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1305
+msgid "weeks"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1306
+msgid "day"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1306
+msgid "days"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1307
+msgid "hour"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1307
+msgid "hours"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1308
+msgid "minute"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1308
+msgid "minutes"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1309
+msgid "second"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1309 ../library/Q_Admin.class.php:1352
+msgid "seconds"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1329
+msgid "sometime"
+msgstr ""
+
+#: ../library/Q_Admin.class.php:1355
+msgid " ago"
+msgstr ""
+
+#: ../library/Q_Data.class.php:116 ../library/Q_Data.class.php:147
+msgid "Plugin Data"
+msgstr ""
+
+#: ../library/Q_Data.class.php:117
+msgid "Data"
+msgstr ""
+
+#: ../library/Q_Data.class.php:138 ../library/Q_Data.class.php:202
+#: ../library/Q_Errors.class.php:354 ../library/Q_Settings.class.php:212
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../library/Q_Data.class.php:156 ../library/Q_Errors.class.php:478
+msgid "Documentation"
+msgstr ""
+
+#: ../library/Q_Data.class.php:175
+msgid "Reload Stored Data"
+msgstr ""
+
+#: ../library/Q_Data.class.php:181
+msgid ""
+"Note: User and plugin activation data is only cleared when the plugin is "
+"deactivated or uninstalled."
+msgstr ""
+
+#: ../library/Q_Data.class.php:253
+#, php-format
+msgid "Plugin Data Reloaded - <a href=\"%s\">%s</a> to see the new data below."
+msgstr ""
+
+#: ../library/Q_Data.class.php:257
+msgid "Refresh"
+msgstr ""
+
+#: ../library/Q_Errors.class.php:80
+msgid "Error Log"
+msgstr ""
+
+#: ../library/Q_Errors.class.php:81
+msgid "Errors"
+msgstr ""
+
+#: ../library/Q_Errors.class.php:438
+msgid "Error Log is empty - good work :)"
+msgstr ""
+
+#: ../library/Q_Errors.class.php:472
+msgid "PHP Error Log"
+msgstr ""
+
+#: ../library/Q_Errors.class.php:490
+msgid "View Full Error Log"
+msgstr ""
+
+#: ../library/Q_Limit_To_Current_User.class.php:52
+#: ../library/Q_Limit_To_Current_User.class.php:57
+#: ../library/Q_Limit_To_Current_User.class.php:62
+#: ../library/Q_Limit_To_Current_User.class.php:67
+#: ../library/Q_Limit_To_Current_User.class.php:72
+#, php-format
+msgid "<a href=\"%s\""
+msgstr ""
+
+#: ../library/Q_Limit_To_Current_User.class.php:120
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: ../library/Q_Limit_To_Current_User.class.php:130
+#, php-format
+msgid "Unattached <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:96
+msgid "Support Type"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:97
+msgid ""
+"You can send open support requests to the community, or select one specific "
+"agent."
+msgstr ""
+
+#: ../library/Q_Settings.class.php:108
+msgid "Select Agent"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:110
+#, php-format
+msgid "Select an agent from the list. <a href=\"%s\" class=\"_blank\">%s</a>."
+msgstr ""
+
+#: ../library/Q_Settings.class.php:112
+msgid "Read More"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:121
+msgid "WordPress"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:123 ../library/Q_Settings.class.php:139
+#: ../library/Q_Settings.class.php:155
+#, php-format
+msgid "Include information about your <a href=\"%s\" class=\"_blank\">%s</a>."
+msgstr ""
+
+#: ../library/Q_Settings.class.php:125
+msgid "WordPress Installation"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:137
+msgid "Server"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:141
+msgid "Web Server"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:153
+msgid "Client"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:157
+msgid "Browser"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:225
+msgid "WordPress Support Settings"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:229
+#, php-format
+msgid ""
+"\n"
+"                    <p>You can make support requests to the <a href=\"%1$s\" "
+"class=\"_blank\">%2$s</a> or a <a href=\"%3$s\" class=\"_blank\">%4$s</a> or "
+"find out more about how the <a href=\"%5$s\" class=\"_blank\">%6$s</a> works."
+"</p>"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:234
+msgid "Community"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:236
+msgid "Dedicated Agent"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:238
+msgid "Support Process"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:283
+msgid "Save Settings"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:288
+msgid ""
+"\n"
+"                            <p><strong>Note:</strong> The settings page may "
+"take a while to save if you have selected to include WordPress Data.</p>"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:324
+msgid "You need to Connect your account first."
+msgstr ""
+
+#: ../library/Q_Settings.class.php:336
+msgid "User Account Error!"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:382
+msgid "Account Settings Saved "
+msgstr ""
+
+#: ../library/Q_Settings.class.php:390
+msgid "Error Saving Settings!"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:418
+msgid "Select"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:495
+msgid "Account already connected"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:572
+msgid "Unknown Connection Error"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:602
+#, php-format
+msgid "You can now make <a href=\"%s\">%s</a>"
+msgstr ""
+
+#: ../library/Q_Settings.class.php:620
+msgid "Connection Error!"
+msgstr ""
+
+#: ../library/q_support_cron.php:36
+msgid "Each Five Minutes"
+msgstr ""
+
+#: ../library/q_support_cron.php:42
+msgid "Each One Minute"
+msgstr ""
+
+#: ../library/q_support_poll.php:33
+msgid "API Unavailable"
+msgstr ""

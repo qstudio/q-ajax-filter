@@ -178,8 +178,8 @@
             if ( self.first == true ) {
                 
                 //console.log( "first time.." );
-                self.reset();
-                self.first = false; // load normally from now ##
+                //self.reset();
+                //self.first = false; // load normally from now ##
                 
             }
 

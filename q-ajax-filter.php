@@ -4,7 +4,7 @@
  * Plugin Name: Search & Filter via AJAX
  * Plugin URI: http://qstudio.us/plugins/
  * Description: Filter posts by taxonomies or text search using AJAX to load results
- * Version: 1.7.1
+ * Version: 1.7.2
  * Author: Q Studio
  * Author URI: http://qstudio.us
  * License: GPL2
@@ -26,7 +26,7 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
     }
     
     // plugin version
-    define( 'Q_AJAX_FILTER_VERSION', '1.7.1' ); // version ##
+    define( 'Q_AJAX_FILTER_VERSION', '1.7.2' ); // version ##
     
     // instatiate plugin via WP hook - not too early, not too late ##
     add_action( 'init', array ( 'Q_AJAX_Filter', 'get_instance' ), 0 );
@@ -188,10 +188,10 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
             $order_by = isset( $atts['order_by'] ) && ! empty( $atts['order_by'] ) ? $atts['order_by'] : 'date' ;
             
             // filter position ##
-            $filter_position = isset( $atts['filter_position'] ) && ! empty( $atts['filter_position'] ) ? $atts['filter_position'] : 'side' ;
+            $filter_position = isset( $atts['filter_position'] ) && ! empty( $atts['filter_position'] ) ? $atts['filter_position'] : 'top' ;
             
             // filter type ##
-            $filter_type = isset( $atts['filter_type'] ) && ! empty( $atts['filter_type'] ) ? $atts['filter_type'] : 'list' ;
+            $filter_type = isset( $atts['filter_type'] ) && ! empty( $atts['filter_type'] ) ? $atts['filter_type'] : 'select' ;
             
             // add inline JS to instatiate AJAX call ##
             $this->add_inline_javascript( $post_type, $template, $order, $order_by, $filter_type, $filter_position );
@@ -240,26 +240,26 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
                 $theme_url = get_stylesheet_directory_uri();
                 
                 // check in active template ##
-                if ( file_exists( $theme_path.'/q_ajax_filter.css' ) ) {
+                if ( file_exists( $theme_path.'/q-ajax-filter.css' ) ) {
                     
-                    wp_register_style( 'q-ajax-filter-css', $theme_url.'/library/css/q_ajax_filter.css' );
+                    wp_register_style( 'q-ajax-filter-css', $theme_url.'/library/css/q-ajax-filter.css' );
                     
                 } else {
                     
-                    wp_register_style( 'q-ajax-filter-css', plugins_url( "css/q_ajax_filter.css", __FILE__ ) );
+                    wp_register_style( 'q-ajax-filter-css', plugins_url( "css/q-ajax-filter.css", __FILE__ ) );
                     
                 }
                 
                 wp_enqueue_style('q-ajax-filter-css');
                 
                 // check in active template ##
-                if ( file_exists( $theme_path.'/library/js/q_ajax_filter.js' ) ) {
+                if ( file_exists( $theme_path.'/library/js/q-ajax-filter.js' ) ) {
                     
-                    wp_register_style( 'q-ajax-filter-css', $theme_url.'/library/js/q_ajax_filter.js' );
+                    wp_register_style( 'q-ajax-filter-css', $theme_url.'/library/js/q-ajax-filter.js' );
                     
                 } else {
                     
-                    wp_register_script('q-ajax-filter-js', plugins_url( "js/q_ajax_filter.js" , __FILE__ ) ,array('jquery'), Q_AJAX_FILTER_VERSION ,true);
+                    wp_register_script('q-ajax-filter-js', plugins_url( "js/q-ajax-filter.js" , __FILE__ ) ,array('jquery'), Q_AJAX_FILTER_VERSION ,true);
                     
                 }
                 
@@ -270,7 +270,7 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
                         'site_name' => get_bloginfo("sitename")
                     ,   'search' => __( 'Search', self::$text_domain )
                     ,   'search_results_for' => __( 'Search Results For', self::$text_domain )
-                    ,   'on_load_text' => __( 'Search & Filter!', self::$text_domain )
+                    ,   'on_load_text' => __( 'Search & filter to see results', self::$text_domain )
                 );
                 wp_localize_script( 'q-ajax-filter-js', 'q_ajax_filter', $translation_array );
             

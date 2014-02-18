@@ -3,7 +3,7 @@
 **Tags:** filter, search, AJAX, posts, taxonomies  
 **Requires at least:** 3  
 **Tested up to:** 3.8.1  
-**Stable tag:** 1.7.1  
+**Stable tag:** 1.7.2 
 **License:** GPL  
 
 Filter posts by taxonomies or text search using AJAX to load results
@@ -54,6 +54,10 @@ The shortcode accepts the following arguments:
 - filter_type ( "select" OR "list" )
 
 ## Changelog ##
+
+### 1.7.2 ###
+
+* template file updates
 
 ### 1.7.1 ###
 

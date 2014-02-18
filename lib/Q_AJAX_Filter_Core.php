@@ -25,8 +25,8 @@ class Q_AJAX_Filter_Core {
         ,   $template = 'ajax-filter.php'
         ,   $order = 'DESC'
         ,   $order_by = 'date'
-        ,   $filter_type = 'list' 
-        ,   $filter_position = 'side' 
+        ,   $filter_type = 'select' 
+        ,   $filter_position = 'top' 
         )
     {
         
@@ -93,7 +93,7 @@ class Q_AJAX_Filter_Core {
         ,   $order                  = 'DESC'
         ,   $order_by               = 'date'
         ,   $use_queried_object     = true // $use_queried_object refers to using the Queried Object ##
-        ,   $filter_position        = 'side' 
+        ,   $filter_position        = 'top' 
         ) 
     {
         
@@ -106,8 +106,8 @@ class Q_AJAX_Filter_Core {
             // grab post data ##
             $post_type = isset( $_POST['post_type'] ) ? explode( ',', $_POST['post_type'] ) : $post_type;
             $template = isset( $_POST['template'] ) ? $_POST['template'] : $template ;
-            $template = isset( $_POST['order'] ) ? $_POST['order'] : $order ;
-            $template = isset( $_POST['order_by'] ) ? $_POST['order_by'] : $order_by ;
+            $order = isset( $_POST['order'] ) ? $_POST['order'] : $order ;
+            $order_by = isset( $_POST['order_by'] ) ? $_POST['order_by'] : $order_by ;
             $_POST_filters = isset( $_POST['filters'] ) ? explode('&',$_POST['filters']) : null ;
             #pr( $_POST_filters );
             
@@ -212,6 +212,7 @@ class Q_AJAX_Filter_Core {
         #}
         
         // filters ##
+        $date_range = false;
         if ( isset( $filters ) ){
            
             // add all the filters to tax_query ##
@@ -220,7 +221,6 @@ class Q_AJAX_Filter_Core {
                 // data filtering ##
                 if ( $taxonomy == 'date' ) {
                     
-                    global $date_range; // @todo - why global ?? ##
                     $date_range = $ids;
                 
                 // authoer filtering ##
@@ -259,50 +259,62 @@ class Q_AJAX_Filter_Core {
         
         }
 
-        // template file ##
-        if ( file_exists(get_stylesheet_directory()."/library/templates/".$template) ) {
-            
-            include get_stylesheet_directory()."/library/templates/".$template;
-            
-        } else {
-            
-            // counter ##
-            $i = 0;
-            
-            #pr( $args );
-            
-            // new WP_Query ##
-            $q_ajax_filter_wp_query = new WP_Query();
-            
-            // parse args ##
-            $q_ajax_filter_wp_query->query( $args );
-            
-            if ( $q_ajax_filter_wp_query->have_posts() ) {
+        // counter ##
+        $i = 0;
+
+        #pr($args);
+        if ( $date_range ) {
+
+            add_filter( 'posts_where', array ( $this, 'q_ajax_filter_where' ) );
+
+        }
+
+        #pr($args);
+
+        // new WP_Query ##
+        $q_ajax_filter_wp_query = new WP_Query();
+
+        // parse args ##
+        $q_ajax_filter_wp_query->query( $args );
+
+        // remove filter - might need to do this dynamically ##
+        remove_filter( 'posts_where', array ( $this, 'q_ajax_filter_where' ) );
+
+        if ( $q_ajax_filter_wp_query->have_posts() ) {
+
+            while ( $q_ajax_filter_wp_query->have_posts() ) {
+
+                $q_ajax_filter_wp_query->the_post(); 
                 
-                while ( $q_ajax_filter_wp_query->have_posts() ) {
+                // template file ##
+                #pr( $template );
+                if ( $template && file_exists( get_stylesheet_directory()."/library/templates/".$template ) ) {
                     
-                    $q_ajax_filter_wp_query->the_post(); 
-                
-                    // iterate ##
-                    $i++; 
+                    #pr( 'found...' );
+                    include get_stylesheet_directory()."/library/templates/".$template;
+
+                } else {
                 
 ?>
-                <article class="ajax-loaded">
-                    <h3><?php the_title();?></h3>
-                    <?php the_post_thumbnail(array( 150, 150 )); ?>
-                    <p><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php _e( "Read More", Q_AJAX_Filter::$text_domain ); ?></a>
-                </article>
+                    <article class="ajax-loaded">
+                        <h3><?php the_title();?></h3>
+                        <?php the_post_thumbnail(array( 150, 150 )); ?>
+                        <p><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php _e( "Read More", Q_AJAX_Filter::$text_domain ); ?></a>
+                    </article>
 <?php 
-            
-                } // white loop ##
-                
-            } else {
-                
-                echo "<p class='no-results'>"; _e( "No Results found :(", Q_AJAX_Filter::$text_domain ); echo "</p>"; 
-            
-            }
-            
+                    
+                } // template ##
+
+                // iterate ##
+                $i++; 
+
+            } // while loop ##
+
+        } else {
+
+            echo "<p class='no-results'>"; _e( "No Results found :(", Q_AJAX_Filter::$text_domain ); echo "</p>"; 
+
         }
 
         if( $hide_pagination === false ) {
@@ -509,8 +521,8 @@ class Q_AJAX_Filter_Core {
             $taxonomies = array('category')
         ,   $template = 'ajax-filter.php'
         ,   $post_type = array('post')
-        ,   $filter_position = 'side'
-        ,   $filter_type = 'list' 
+        ,   $filter_position = 'top'
+        ,   $filter_type = 'select' 
         ,   $show_count = 0
         ,   $hide_titles = 0 
     ) 
@@ -735,11 +747,11 @@ class Q_AJAX_Filter_Core {
         } // taxs set ##
 
 ?>
-            <li class="input reset">
-                <input type="reset" id="reset" class="reset" value="<?php _e("Reset", Q_AJAX_Filter::$text_domain ); ?>" />
-            </li>
             <li class="input submit">
                 <input type="submit" id="go" class="go filter" value="<?php _e("Search", Q_AJAX_Filter::$text_domain );?>" />
+            </li>
+            <li class="input reset">
+                <input type="reset" id="reset" class="reset" value="<?php _e("Clear", Q_AJAX_Filter::$text_domain ); ?>" />
             </li>
         </ul>
 <?php
@@ -794,6 +806,25 @@ class Q_AJAX_Filter_Core {
           return false;
         }
         
+    }
+    
+    
+    // Create a new filtering function that will add our where clause to the query
+    public function q_ajax_filter_where( $where = '' ) {
+
+        // get highest value, as that's what counts ##
+        global $date_range;
+        #pr($date_range);
+        $key = array_search(max($date_range), $date_range);
+        $range = $date_range[$key];
+        #pr($range);
+        $date = getdate();
+        $cutoff = date('Y-m-d', mktime( 0, 0, 0, $date['mon'], $date['mday'] - $range, $date['year']));
+        $where .= " AND post_date > '$cutoff'";
+        #wp_die("where filtered: ".$where);
+
+        return $where;
+
     }
     
 

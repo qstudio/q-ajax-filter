@@ -51,7 +51,7 @@ div#progbar{
 /* search page */
 
 body.ajax-filter #content h1 {
-    padding-left: 23%;
+    padding-left: 0;
     font-size: 140%;
     margin-bottom: 10px;
 }
@@ -124,8 +124,7 @@ body.ajax-filter #content .input {
 }
 
 body.ajax-filter #content .input input {
-    float: left;
-    width: 93%;
+    padding: 11px 9px 10px;
 }
 
 body.ajax-filter #content .input input:focus {
@@ -146,11 +145,9 @@ body.ajax-filter #content .selector select[disabled] {
 }
 
 body.ajax-filter #content input[type="submit"], body.ajax-filter #content input[type="reset"] {
-    float: right;
-    width: auto;
     margin-top: 10px;
-    margin-left: 10px;
     font-size: 110%;
+    padding: 9px 15px;
 }
 
 body.ajax-filter #content input[type="submit"]:hover, body.ajax-filter #content input[type="reset"]:hover {
@@ -197,7 +194,7 @@ body.ajax-filter #content ul.ajax-filters.horizontal li {
 }
 
 body.ajax-filter #content ul.ajax-filters.horizontal li.text {
-    margin-top: 12px;
+    margin-top: 9px;
     margin-right: 10px;
 }
 
@@ -211,7 +208,8 @@ body.ajax-filter #content ul.ajax-filters.horizontal li ul li {
 
 body.ajax-filter #content ul.ajax-filters.horizontal li.reset,
 body.ajax-filter #content ul.ajax-filters.horizontal li.submit {
-    margin-top: 3px;
+    margin-top: 0px;
+    margin-right: 10px;
 }
 
 body.ajax-filter #content #ajax-content.horizontal {
@@ -294,7 +292,7 @@ body.ajax-filter #content .ajax-filters h4 {
     clear: both;
     margin-bottom: 30px;
     position: relative;
-    display: none;
+/*    display: none;*/
 }
 
 #ajax-filtered-section .ajax-loaded .image {

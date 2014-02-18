@@ -4,7 +4,7 @@
  * Plugin Name: Search & Filter via AJAX
  * Plugin URI: http://qstudio.us/plugins/
  * Description: Filter posts by taxonomies or text search using AJAX to load results
- * Version: 1.7.0
+ * Version: 1.7.1
  * Author: Q Studio
  * Author URI: http://qstudio.us
  * License: GPL2
@@ -26,7 +26,7 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
     }
     
     // plugin version
-    define( 'Q_AJAX_FILTER_VERSION', '1.7.0' ); // version ##
+    define( 'Q_AJAX_FILTER_VERSION', '1.7.1' ); // version ##
     
     // instatiate plugin via WP hook - not too early, not too late ##
     add_action( 'init', array ( 'Q_AJAX_Filter', 'get_instance' ), 0 );

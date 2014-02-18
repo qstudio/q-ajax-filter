@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Support\n"
-"POT-Creation-Date: 2014-02-18 09:34-0000\n"
-"PO-Revision-Date: 2014-02-18 09:34-0000\n"
+"POT-Creation-Date: 2014-02-18 22:32-0000\n"
+"PO-Revision-Date: 2014-02-18 22:32-0000\n"
 "Last-Translator: Ray <ray@qstudio.us>\n"
 "Language-Team: Q Studio <team@qstudio.us>\n"
 "Language: en\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: ../q-ajax-filter.php:271 ../lib/Q_AJAX_Filter_Core.php:539
-#: ../lib/Q_AJAX_Filter_Core.php:742
+#: ../q-ajax-filter.php:271 ../lib/Q_AJAX_Filter_Core.php:551
+#: ../lib/Q_AJAX_Filter_Core.php:751
 msgid "Search"
 msgstr ""
 
@@ -27,53 +27,49 @@ msgid "Search Results For"
 msgstr ""
 
 #: ../q-ajax-filter.php:273
-msgid "Search & Filter!"
+msgid "Search & filter to see results"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:294
+#: ../lib/Q_AJAX_Filter_Core.php:303
 msgid "Read More"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:302
+#: ../lib/Q_AJAX_Filter_Core.php:316
 msgid "No Results found :("
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:347
+#: ../lib/Q_AJAX_Filter_Core.php:359
 msgid "Back"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:462
+#: ../lib/Q_AJAX_Filter_Core.php:474
 msgid "Next"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:562
+#: ../lib/Q_AJAX_Filter_Core.php:574
 msgid "Date Range"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:568
+#: ../lib/Q_AJAX_Filter_Core.php:580
 msgid "Today"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:573
+#: ../lib/Q_AJAX_Filter_Core.php:585
 msgid "One Week"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:578
+#: ../lib/Q_AJAX_Filter_Core.php:590
 msgid "One Month"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:583
+#: ../lib/Q_AJAX_Filter_Core.php:595
 msgid "One Year"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:592
+#: ../lib/Q_AJAX_Filter_Core.php:604
 msgid "Authors"
 msgstr ""
 
-#: ../lib/Q_AJAX_Filter_Core.php:739
-msgid "Reset"
-msgstr ""
-
-#: ../templates/ajax-filter.php:121
-msgid "No Results found - Please use a broader search"
+#: ../lib/Q_AJAX_Filter_Core.php:754
+msgid "Clear"
 msgstr ""

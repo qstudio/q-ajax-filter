@@ -127,7 +127,7 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
             
             global $post;
             
-            if ( is_page() && $post && has_shortcode( $post->post_content, 'ajaxFilter' ) ){
+            if ( is_page() && $post && do_shortcode( 'ajaxFilter') ){
                 
                 // build an empty array, if not present ##
                 if ( ! is_array( $classes ) ) { $classes = array(); }
@@ -233,7 +233,7 @@ if ( ! class_exists( 'Q_AJAX_Filter' ) )
             
             global $post;
             
-            if ( isset( $post ) && has_shortcode( $post->post_content, 'ajaxFilter') ){
+            if ( isset( $post ) && do_shortcode( 'ajaxFilter') ){
                 
                 // get the theme path & URL ##
                 $theme_path = get_stylesheet_directory();
